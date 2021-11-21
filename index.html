@@ -91,10 +91,16 @@
     }
 
 
-    function pattern3(){
+     function pattern3(){
         var str="";
         for(var i= 0;i<6;i++){
-            
+            str += "*";
+            document.getElementById("para3").innerHTML += '<p>'+str+'</p>';
+        }
+        var str1 =str;
+        for(var i= 6;i>0;i--){
+            str1 = str.substr(0,str1.length-1);
+            document.getElementById("para3").innerHTML += '<p>'+str1+'</p>';
         }
     }
 </script>
