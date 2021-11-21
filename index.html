@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        p{
+            text-align: center;
+            font-weight: bolder;
+            font-size: xx-large;
+            background-color: gray;
+            margin: 5% 20%;
+            
+           
+           
+        }
+        button{
+            background-color: rgb(94, 18, 90);
+            border-style: double;
+            box-shadow:2px 3px rgb(17, 11, 11) ;
+            color: white;
+            font-weight: bolder;
+            margin: 2%;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <button style="border-radius: 10%;height: 70px; width:200px" onclick="pattern()">PrintPattern 1</button>
+    <button style="border-radius: 10%;height: 70px; width:200px" onclick="pattern1()">PrintPattern 2</button>
+    <button style="border-radius: 10%;height: 70px; width:200px" onclick="pattern2()">PrintPattern 3</button>
+    <button style="border-radius: 10%;height: 70px; width:200px" onclick="pattern3()">PrintPattern 4</button>
+    <p id="para"></p>
+    <p id="para1"></p>
+    <p id="para2"></p>
+    <p id="para3"></p>
+</body>
+<script>
+    var c = document.getElementById("para")
+    function pattern(){
+        var j = prompt("Enter Integer Value","5");
+        if(j<=0){
+            pattern();
+        }
+        var str="";
+        for(var i =0;i<j;i++){
+            str += "*" 
+
+        }
+        for(var i =0;i<j;i++){
+        c.innerHTML += '<p>'+ str+'</p>';
+     }
+    }
+
+    function pattern1(){
+        var c =  prompt("Enter  number of lines ","5");
+        var str ="";
+        for(var i=0;i<c;i++){
+            str+= "*";
+            document.getElementById("para1").innerHTML += '<p>'+ str +'</p>';
+        }
+    }
+
+    function pattern2(){
+        var str ="";
+        
+        for(var i=0;i<6;i++){
+            str = "*"
+            for(var j =0;j<i;j++){
+                str += "&nbsp;"; 
+                str += "&nbsp;"; 
+                str += "&nbsp;"; 
+            }
+           if(i>0){
+            str += "*";}
+           
+            document.getElementById("para2").innerHTML += '<p>'+ str + '</p>'; 
+        }
+       
+        var str1 = "";
+        for(vari=0;i<18;i++){
+            str1 +="*"
+        }
+        document.getElementById("para2").innerHTML += '<p>'+str1 +'</p>';
+    }
+
+
+    function pattern3(){
+        var str="";
+        for(var i= 0;i<6;i++){
+            
+        }
+    }
+</script>
+</html>
